@@ -1,229 +1,68 @@
-/* ===== Base Reset ===== */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fafafa;
-  color: #222;
-  line-height: 1.6;
 }
 
-/* ===== Navbar ===== */
-header {
-  background-color: #fff;
-  padding: 15px 25px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+/* Body */
+body {
+  background: linear-gradient(to bottom right, #ffe6f0, #ffccf2);
+  color: #330033;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-}
-
-header img.logo {
-  height: 50px;
-  width: auto;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-nav ul li a:hover {
-  color: #b08d57; /* luxury gold tone */
-}
-
-/* Mobile Nav */
-.menu-toggle {
-  display: none;
   flex-direction: column;
-  cursor: pointer;
+  min-height: 100vh;
 }
 
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background: #333;
-  margin: 4px 0;
-}
-
-/* ===== Hero Section ===== */
-.hero {
-  background: linear-gradient(to bottom right, #fff, #f4f4f4);
+/* Header */
+header {
   text-align: center;
-  padding: 60px 20px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  color: #111;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* ===== Project / Portfolio Grid ===== */
-.projects {
-  padding: 50px 20px;
-  background: #fff;
-}
-
-.projects h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.project-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-card h3 {
-  padding: 15px;
-  font-size: 1.3rem;
-  color: #111;
-}
-
-.project-card p {
-  padding: 0 15px 15px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* ===== Testimonials ===== */
-.testimonials {
-  background: #f9f9f9;
-  padding: 50px 20px;
-}
-
-.testimonials h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.testimonial {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-  font-style: italic;
-}
-
-.testimonial strong {
-  display: block;
-  margin-top: 10px;
-  font-style: normal;
-}
-
-/* ===== Contact Form ===== */
-.contact {
-  padding: 50px 20px;
-}
-
-.contact h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-form button {
-  background: #b08d57;
+  padding: 50px 20px 20px 20px;
+  background: #ff99cc;
   color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-form button:hover {
-  background: #96723e;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-/* ===== Footer ===== */
+header p {
+  font-size: 1.2rem;
+}
+
+/* Main */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.info {
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #330033;
+}
+
+.chat-widget {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #111;
-  color: #fff;
-}
-
-/* ===== Responsive Styles ===== */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
+  background: #ff99cc;
+  color: white;
+  font-weight: bold;
 }
